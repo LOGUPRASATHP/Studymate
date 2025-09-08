@@ -1,0 +1,1245 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.stApp {
+    background: url('https://wallpaperaccess.com/full/5981523.jpg');
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+
+}
+
+/* Main title styling */
+h1 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    color: white !important;
+    text-align: center !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+    margin-bottom: 10px !important;
+}
+
+/* Submit Button Container */
+div.stButton > button {
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    background-size: 200% 200%;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(221, 36, 118, 0.3);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Hover Effects - Minimal scaling */
+div.stButton > button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(221, 36, 118, 0.4);
+    background-position: 100% 100%;
+}
+
+/* Active State */
+div.stButton > button:active {
+    transform: translateY(1px) scale(1);
+    box-shadow: 0 3px 10px rgba(221, 36, 118, 0.3);
+}
+
+/* Pulse Glow Effect */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 15px rgba(221, 36, 118, 0.4); }
+    50% { box-shadow: 0 0 25px rgba(221, 36, 118, 0.6); }
+    100% { box-shadow: 0 0 15px rgba(221, 36, 118, 0.4); }
+}
+
+div.stButton > button:hover {
+    animation: pulseGlow 1.5s infinite;
+}
+
+/* Download Button */
+.download-btn {
+    background: linear-gradient(45deg, #4CAF50, #45a049) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3) !important;
+}
+
+.download-btn:hover {
+    transform: translateY(-1px) scale(1.01) !important;
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4) !important;
+}
+
+.download-btn:active {
+    transform: translateY(0) scale(1) !important;
+}
+
+/* Quiz Button */
+div.stButton > button[data-testid="baseButton-secondary"] {
+    background: linear-gradient(45deg, #FF9800, #F57C00) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 12px 25px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: white !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 3px 10px rgba(255, 152, 0, 0.3) !important;
+}
+
+div.stButton > button[data-testid="baseButton-secondary"]:hover {
+    transform: translateY(-1px) scale(1.01) !important;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4) !important;
+}
+
+/* Upload area styling */
+.uploader {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.uploader:hover {
+    border-color: rgba(221, 36, 118, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    border-radius: 15px;
+}
+
+/* Text input styling */
+.stTextInput>div>div>input {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    border: 2px solid transparent;
+    padding: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    color: #ffffff !important;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: #DD2476;
+    box-shadow: 0 0 15px rgba(221, 36, 118, 0.2);
+    transform: translateY(-1px);
+    
+}
+
+/* Label styling */
+.stTextInput label, .uploader label {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
+    color: white !important;
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Hide all spinners */
+.stSpinner {
+    display: none !important;
+}
+
+/* Sidebar styling */
+.sidebar .sidebar-content {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(15px) !important;
+    border-right: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Answer section styling - Parchment style */
+.answer-box {
+    background: linear-gradient(rgba(253, 245, 230, 0.95), rgba(250, 240, 220, 0.95));
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-left: 6px solid #8B4513;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    line-height: 1.7;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Parchment texture overlay */
+.answer-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.1"/></svg>');
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+/* Answer header */
+.answer-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #8B4513;
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    border-bottom: 2px solid #D2B48C;
+    padding-bottom: 8px;
+}
+
+/* Custom scrollbar for answer box */
+.answer-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.answer-box::-webkit-scrollbar-track {
+    background: rgba(210, 180, 140, 0.2);
+    border-radius: 3px;
+}
+
+.answer-box::-webkit-scrollbar-thumb {
+    background: #8B4513;
+    border-radius: 3px;
+}
+
+/* Loading Animation */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.book-loader {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.book {
+    width: 18px;
+    height: 35px;
+    background: linear-gradient(45deg, #FF512F, #DD2476);
+    border-radius: 3px;
+    animation: bookBounce 1.5s infinite ease-in-out;
+}
+
+.book:nth-child(1) { animation-delay: 0s; }
+.book:nth-child(2) { animation-delay: 0.2s; }
+.book:nth-child(3) { animation-delay: 0.4s; }
+.book:nth-child(4) { animation-delay: 0.6s; }
+.book:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes bookBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.loading-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.loading-dots {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #DD2476;
+    border-radius: 50%;
+    animation: dotPulse 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+/* Quiz Styling - DARK TEXT COLORS */
+.stRadio > div {
+    background: black !important;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 8px 0;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+    color: #ffffff !important;
+}
+
+.stRadio > div:hover {
+    border-color: #4CAF50;
+    transform: translateY(-1px);
+}
+
+.stRadio label {
+    color: #2c3e50 !important;
+    font-weight: 500 !important;
+}
+
+/* Progress Bar Styling */
+.stProgress > div > div > div {
+    background: linear-gradient(90deg, #4CAF50, #45a049) !important;
+}
+
+/* Quiz text colors */
+.stMarkdown {
+    color: #2c3e50 !important;
+}
+
+.stSuccess {
+    background: rgba(76, 175, 80, 0.1) !important;
+    border-left: 4px solid #4CAF50 !important;
+    color: #2c3e50 !important;
+}
+
+.stError {
+    background: rgba(244, 67, 54, 0.1) !important;
+    border-left: 4px solid #F44336 !important;
+    color: #2c3e50 !important;
+}
+
+.stInfo {
+    background: rgba(33, 150, 243, 0.1) !important;
+    border-left: 4px solid #2196F3 !important;
+    color: #2c3e50 !important;
+}
+
+.stWarning {
+    background: rgba(255, 152, 0, 0.1) !important;
+    border-left: 4px solid #FF9800 !important;
+    color: #2c3e50 !important;
+}
+
+/* Remove all symbol hovers */
+.stButton > button:hover::before,
+.stButton > button:hover::after {
+    content: none !important;
+}
+
+/* Remove all transform scales on hover except minimal */
+.stButton > button:hover {
+    transform: translateY(-1px) scale(1.01) !important;
+}
+
+/* Ensure no other hover effects */
+.stButton > button:hover span {
+    transform: none !important;
+}
+
+/* Quiz question styling */
+div[data-testid="stExpander"] {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 10px !important;
+    margin: 10px 0 !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+div[data-testid="stExpander"] details summary {
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+}
+
+/* Radio button text color */
+.st-bd {
+    color: #2c3e50 !important;
+}
+
+.st-bc {
+    color: #2c3e50 !important;
+}
+
+/* Ensure all text in quiz is visible */
+.st-bq {
+    color: #2c3e50 !important;
+}
+
+.st-br {
+    color: #2c3e50 !important;
+}
+
+.st-bs {
+    color: #2c3e50 !important;
+}
+/* Image Uploader Styling */
+.image-uploader {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 3px dashed rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.image-uploader:hover {
+    border-color: rgba(76, 175, 80, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Image preview styling */
+.stImage {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.stImage:hover {
+    border-color: rgba(76, 175, 80, 0.8);
+    transform: scale(1.02);
+}
+
+/* Two-column layout for uploaders */
+.css-1r6slb0 {
+    gap: 20px;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .css-1r6slb0 {
+        flex-direction: column;
+    }
+    
+    .uploader, .image-uploader {
+        margin: 10px 0;
+    }
+}
+
+/* Image processing status */
+.image-processing {
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #FFC107;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Success message for images */
+.image-success {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+/* Language Selector Styling */
+.stSelectbox > div > div {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 10px !important;
+    border: 2px solid rgba(221, 36, 118, 0.3) !important;
+}
+
+.stSelectbox label {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Audio Player Styling */
+.stAudio {
+    border-radius: 15px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+}
+
+/* Read Aloud Button */
+div.stButton > button[kind="secondary"] {
+    background: linear-gradient(45deg, #2196F3, #21CBF3) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+div.stButton > button[kind="secondary"]:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4) !important;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Audio player focus */
+audio:focus {
+    outline: 2px solid #2196F3;
+    outline-offset: 2px;
+}
+/* ===== NEW FEATURES CSS - Add to your existing styles.css ===== */
+
+/* Share Options Styling */
+.share-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.share-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Share Button Styling */
+.share-button {
+    width: 100%;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Platform-specific colors */
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #20B358, #0E6B5E);
+    transform: translateY(-2px);
+}
+
+.email-btn {
+    background: linear-gradient(135deg, #EA4335, #FBBC05);
+}
+
+.email-btn:hover {
+    background: linear-gradient(135deg, #C23321, #E37400);
+    transform: translateY(-2px);
+}
+
+.twitter-btn {
+    background: linear-gradient(135deg, #1DA1F2, #0E71A8);
+}
+
+.twitter-btn:hover {
+    background: linear-gradient(135deg, #1A91DA, #0C5D8A);
+    transform: translateY(-2px);
+}
+
+.linkedin-btn {
+    background: linear-gradient(135deg, #0077B5, #005885);
+}
+
+.linkedin-btn:hover {
+    background: linear-gradient(135deg, #006296, #004766);
+    transform: translateY(-2px);
+}
+
+.telegram-btn {
+    background: linear-gradient(135deg, #0088CC, #005C99);
+}
+
+.telegram-btn:hover {
+    background: linear-gradient(135deg, #0076B3, #004D80);
+    transform: translateY(-2px);
+}
+
+/* Close Share Button */
+.close-share-btn {
+    background: linear-gradient(135deg, #ff4757, #c44569);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.close-share-btn:hover {
+    background: linear-gradient(135deg, #ff3742, #b73e56);
+    transform: translateY(-1px);
+}
+
+/* Enhanced Audio Player Styling */
+.audio-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(240, 147, 251, 0.3);
+}
+
+.audio-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Audio player custom styling */
+audio {
+    width: 100% !important;
+    height: 50px !important;
+    border-radius: 25px !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Question Input Area Enhancement */
+.question-input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.question-input-container textarea {
+    border-radius: 12px !important;
+    border: 2px solid #e1e5e9 !important;
+    padding: 15px !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    resize: vertical !important;
+}
+
+.question-input-container textarea:focus {
+    border-color: #4299e1 !important;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1) !important;
+}
+
+/* Enhanced Submit Button */
+.submit-button-container {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+}
+
+.enhanced-submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 15px 20px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+    min-height: 50px !important;
+}
+
+.enhanced-submit-btn:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+}
+
+.enhanced-submit-btn:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Language Selector Enhancement */
+.language-selector-container {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.language-selector-container .stSelectbox > div > div {
+    border-radius: 8px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Action Buttons Row Enhancement */
+.action-buttons-row {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 12px 16px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%) !important;
+    color: white !important;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #009ac7 0%, #006d96 100%) !important;
+    transform: translateY(-2px) !important;
+}
+
+.share-action-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+    color: white !important;
+}
+
+.share-action-btn:hover {
+    background: linear-gradient(135deg, #e47fe9 0%, #f4455a 100%) !important;
+    transform: translateY(-2px) !important;
+}
+
+.quiz-action-btn {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+    color: white !important;
+}
+
+.quiz-action-btn:hover {
+    background: linear-gradient(135deg, #429beb 0%, #00d9e5 100%) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Translation Indicator */
+.translation-indicator {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8b4513;
+    text-align: center;
+    border-left: 4px solid #ff6b6b;
+}
+
+/* Enhanced Loading Animation for New Features */
+.processing-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    color: white;
+    margin: 10px 0;
+}
+
+.processing-text {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.processing-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsiveness for New Features */
+@media (max-width: 768px) {
+    .share-button {
+        font-size: 12px;
+        padding: 10px 6px;
+    }
+    
+    .action-buttons-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .action-btn {
+        width: 100% !important;
+        margin-bottom: 8px;
+    }
+    
+    .enhanced-submit-btn {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+    
+    .audio-section {
+        padding: 15px;
+    }
+    
+    .share-container {
+        padding: 15px;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+.stButton > button,
+.stSelectbox > div,
+.stTextArea > div > div > textarea {
+    transition: all 0.3s ease !important;
+  
+}
+
+/* Enhanced focus states */
+.stTextArea > div > div > textarea:focus,
+.stSelectbox > div > div:focus-within {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1) !important;
+      color: white;
+}
+/* ===== AUDIO BUTTON CSS - Add to your existing styles.css ===== */
+
+/* Audio Section Container */
+.audio-section-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Audio Section Title */
+.audio-section-title {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Generate Audio Button Styling */
+div.stButton > button[data-testid="baseButton-primary"] {
+    background: linear-gradient(45deg, #FF6B35, #F7931E) !important;
+    border: none !important;
+    border-radius: 25px !important;
+    padding: 12px 20px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4) !important;
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+/* Text Area Styling - White Text */
+.stTextArea textarea {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+}
+
+.stTextArea textarea:focus {
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3) !important;
+}
+
+.stTextArea label {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Quiz Options Styling - White Text */
+.stRadio label {
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.stRadio > div {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    padding: 15px !important;
+    margin: 8px 0 !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stRadio > div:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Radio button circles */
+.stRadio > div > div:first-child {
+    border-color: white !important;
+}
+
+.stRadio > div > div:first-child:hover {
+    border-color: #ff4b4b !important;
+}
+
+/* Selected radio button */
+.stRadio > div[data-testid="stRadio"] > div:first-child[aria-checked="true"] {
+    background-color: #ff4b4b !important;
+    border-color: #ff4b4b !important;
+}
+
+/* Quiz question text */
+div[data-testid="stExpander"] details summary {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Quiz expander background */
+div[data-testid="stExpander"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Placeholder text color */
+.stTextArea textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Ensure all text in quiz areas is white */
+.stMarkdown, .stSuccess, .stError, .stInfo, .stWarning {
+    color: white !important;
+}
+
+/* Progress bar text */
+.stProgress > div > div {
+    color: white !important;
+}
+
+/* Quiz results text */
+.stMarkdown h3 {
+    color: white !important;
+}
+
+/* Button text remains visible */
+.stButton button {
+    color: white !important;
+    z-index: 2 !important;
+    position: relative !important;
+}
+
+/* Ensure no background interferes with white text */
+.stTextInput>div>div>input {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.stTextInput label {
+    color: white !important;
+}
+
+/* Generate Audio Button Hover Effect */
+div.stButton > button[data-testid="baseButton-primary"]:hover {
+    background: linear-gradient(45deg, #FF5722, #E65100) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.6) !important;
+}
+
+/* Generate Audio Button Active State */
+div.stButton > button[data-testid="baseButton-primary"]:active {
+    transform: translateY(1px) scale(0.98) !important;
+    box-shadow: 0 2px 10px rgba(255, 107, 53, 0.4) !important;
+}
+
+/* Audio Button Pulse Animation */
+@keyframes audioPulse {
+    0% { box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); }
+    50% { box-shadow: 0 4px 25px rgba(255, 107, 53, 0.7); }
+    100% { box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); }
+}
+
+div.stButton > button[data-testid="baseButton-primary"]:hover {
+    animation: audioPulse 2s infinite;
+}
+
+/* Audio Button Icon Animation */
+div.stButton > button[data-testid="baseButton-primary"]:before {
+    content: '🎵';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+div.stButton > button[data-testid="baseButton-primary"]:hover:before {
+    left: 10px;
+    opacity: 1;
+}
+
+/* Audio Player Container */
+.audio-player-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.audio-player-container:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Enhanced Audio Player Styling */
+.stAudio {
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stAudio > div {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 20px !important;
+    padding: 10px !important;
+}
+
+/* Custom Audio Controls */
+audio {
+    width: 100% !important;
+    height: 45px !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 5px !important;
+    outline: none !important;
+    border: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
+}
+
+audio:focus {
+    border-color: #FF6B35 !important;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.3) !important;
+}
+
+/* Audio Info Message Styling */
+.stInfo {
+    background: linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
+    padding: 15px !important;
+    text-align: center !important;
+    box-shadow: 0 4px 15px rgba(86, 204, 242, 0.3) !important;
+}
+
+.stInfo > div {
+    color: white !important;
+}
+
+/* Audio Loading Spinner */
+.audio-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.audio-loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: audioSpin 1s linear infinite;
+}
+
+.audio-loading-text {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+@keyframes audioSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Audio Column Styling */
+.audio-columns {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin: 15px 0;
+}
+
+.audio-button-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.audio-player-column {
+    flex: 3;
+    min-width: 300px;
+}
+
+/* Audio Success Message */
+.audio-success {
+    background: linear-gradient(135deg, #56AB2F 0%, #A8E6CF 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 12px;
+    text-align: center;
+    margin: 10px 0;
+    box-shadow: 0 3px 10px rgba(86, 171, 47, 0.3);
+}
+
+/* Audio Error Message */
+.audio-error {
+    background: linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 12px;
+    text-align: center;
+    margin: 10px 0;
+    box-shadow: 0 3px 10px rgba(255, 65, 108, 0.3);
+}
+
+/* Responsive Design for Audio Section */
+@media (max-width: 768px) {
+    .audio-columns {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .audio-button-column,
+    .audio-player-column {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    div.stButton > button[data-testid="baseButton-primary"] {
+        font-size: 14px !important;
+        padding: 10px 16px !important;
+    }
+    
+    .audio-section-container {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    audio {
+        height: 40px !important;
+    }
+}
+
+/* Audio Wave Animation for Button */
+@keyframes audioWave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.2); }
+}
+
+div.stButton > button[data-testid="baseButton-primary"]:hover:after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 15px;
+    background: white;
+    border-radius: 1px;
+    animation: audioWave 1s infinite;
+}
+
+div.stButton > button[data-testid="baseButton-primary"]:hover:after {
+    box-shadow: 
+        5px 0 0 white,
+        10px 0 0 white,
+        15px 0 0 white;
+}
+
+/* Hide default streamlit audio controls styling */
+.stAudio button {
+    background: #FF6B35 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    color: white !important;
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.stAudio button:hover {
+    background: #FF5722 !important;
+    transform: scale(1.1) !important;
+}
+
+/* Audio Section Header Enhancement */
+h3:has(+ .audio-columns) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 20px 0 15px 0 !important;
+    padding: 10px !important;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.3) !important;
+}
